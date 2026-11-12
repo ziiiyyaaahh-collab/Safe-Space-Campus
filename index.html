@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe Space Kampus</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVIGASI -->
+<header class="navbar">
+    <div class="logo">♡ Safe Space <span>Kampus</span></div>
+
+    <nav>
+        <button onclick="showPage('home')">Beranda</button>
+        <button onclick="showPage('feed')">Ruang Cerita</button>
+        <button onclick="showPage('write')">Kirim Cerita</button>
+    </nav>
+</header>
+
+
+<!-- HALAMAN 1: LANDING PAGE -->
+<section id="home" class="page active">
+
+    <div class="hero">
+
+        <div class="hero-text">
+            <p class="subtitle">RUANG AMAN UNTUK SELURUH MAHASISWA</p>
+
+            <h1>SAFE SPACE<br>
+                <span>KAMPUS</span>
+            </h1>
+
+            <h3>
+                Setiap cerita layak didengar.
+                Setiap perasaan pantas dihargai.
+            </h3>
+
+            <p class="description">
+                Tempat untuk berbagi cerita, menyampaikan keluh kesah,
+                saling memberikan dukungan, dan menemukan kekuatan
+                selama perjalanan perkuliahan.
+            </p>
+
+            <div class="hero-buttons">
+                <button class="primary-btn"
+                    onclick="showPage('feed')">
+                    Jelajahi Ruang Cerita →
+                </button>
+
+                <button class="secondary-btn"
+                    onclick="showPage('write')">
+                    Bagikan Ceritamu
+                </button>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <div class="circle"></div>
+
+            <div class="quote-card">
+                <span>♡</span>
+                <h3>Kamu berhak untuk didengar.</h3>
+                <p>Ruang kecil untuk cerita yang berarti.</p>
+            </div>
+
+            <div class="flower">✿</div>
+        </div>
+
+    </div>
+
+    <div class="features">
+        <div>
+            <h3>♡ Berbagi Cerita</h3>
+            <p>Ungkapkan apa yang sedang kamu rasakan.</p>
+        </div>
+
+        <div>
+            <h3>✦ Saling Menguatkan</h3>
+            <p>Berikan dukungan dan motivasi kepada sesama.</p>
+        </div>
+
+        <div>
+            <h3>🔒 Ruang Privat</h3>
+            <p>Sampaikan pengaduan secara pribadi kepada admin.</p>
+        </div>
+    </div>
+
+</section>
+
+
+<!-- HALAMAN 2: BERANDA / RUANG CERITA -->
+<section id="feed" class="page">
+
+    <div class="section-title">
+        <p class="subtitle">CERITA KITA, RUANG KITA</p>
+        <h2>Ruang <span>Cerita</span></h2>
+        <p>Di sini setiap suara memiliki tempat.</p>
+
+        <button class="primary-btn"
+            onclick="showPage('write')">
+            + Buat Postingan
+        </button>
+    </div>
+
+    <div class="feed-container">
+
+        <div class="feed-main">
+
+            <div class="filters">
+                <button onclick="filterPosts('all')">Semua</button>
+                <button onclick="filterPosts('story')">Keluh Kesah</button>
+                <button onclick="filterPosts('motivation')">Motivasi</button>
+            </div>
+
+            <div id="postsList">
+
+                <!-- POSTINGAN CONTOH -->
+                <article class="post-card" data-kind="story">
+
+                    <div class="post-header">
+                        <div class="avatar">A</div>
+
+                        <div>
+                            <b>Anonim</b>
+                            <small>Mahasiswa · Keluh Kesah</small>
+                        </div>
+                    </div>
+
+                    <p class="post-content">
+                        Akhir-akhir ini aku merasa kewalahan
+                        membagi waktu antara tugas kuliah dan
+                        kegiatan lainnya. Semoga semuanya bisa
+                        segera membaik.
+                    </p>
+
+                    <div class="post-footer">
+                        <span>♡ Saling menguatkan</span>
+                        <button disabled>Contoh postingan</button>
+                    </div>
+
+                </article>
+
+                <article class="post-card" data-kind="motivation">
+
+                    <div class="post-header">
+                        <div class="avatar cream">N</div>
+
+                        <div>
+                            <b>Nara</b>
+                            <small>Mahasiswa · Motivasi</small>
+                        </div>
+                    </div>
+
+                    <p class="post-content">
+                        Jangan ukur perjalananmu dari seberapa
+                        cepat orang lain sampai. Setiap orang
+                        memiliki waktu dan prosesnya masing-masing.
+                        Tetaplah melangkah!
+                    </p>
+
+                    <div class="post-footer">
+                        <span>♡ Saling menguatkan</span>
+                        <button disabled>Contoh postingan</button>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+        <aside class="sidebar">
+            <h3>♡ Ruang Aman Dimulai dari Kita</h3>
+
+            <p>
+                Jadilah pendengar yang baik.
+                Hargai setiap cerita dan jangan
+                menghakimi perasaan orang lain.
+            </p>
+
+            <hr>
+
+            <b>Ingat sebelum membalas:</b>
+
+            <ul>
+                <li>Dengarkan tanpa menghakimi.</li>
+                <li>Gunakan kata-kata yang sopan.</li>
+                <li>Berikan saran yang membangun.</li>
+            </ul>
+        </aside>
+
+    </div>
+
+</section>
+
+
+<!-- HALAMAN 3: KIRIM CERITA -->
+<section id="write" class="page">
+
+    <div class="section-title">
+        <p class="subtitle">KAMU BISA MEMILIH</p>
+        <h2>Bagikan <span>Ceritamu</span></h2>
+        <p>Pilih ruang yang paling sesuai dengan kebutuhanmu.</p>
+    </div>
+
+
+    <div class="choice-container">
+
+        <div class="choice-card">
+            <div class="choice-icon">🔒</div>
+
+            <h3>Pengaduan Pribadi</h3>
+
+            <p>
+                Sampaikan permasalahan secara privat
+                kepada admin kampus. Tidak ditampilkan
+                di beranda mahasiswa.
+            </p>
+
+            <button onclick="openForm('privateForm')">
+                Isi Pengaduan Privat →
+            </button>
+        </div>
+
+
+        <div class="choice-card">
+            <div class="choice-icon">♡</div>
+
+            <h3>Keluh Kesah</h3>
+
+            <p>
+                Bagikan pengalaman atau permasalahan
+                yang sedang kamu hadapi agar mahasiswa
+                lain dapat memberikan dukungan.
+            </p>
+
+            <button onclick="openForm('storyForm')">
+                Tulis Keluh Kesah →
+            </button>
+        </div>
+
+
+        <div class="choice-card">
+            <div class="choice-icon">✦</div>
+
+            <h3>Berbagi Motivasi</h3>
+
+            <p>
+                Bagikan kalimat penyemangat dan
+                pengalaman positif untuk mahasiswa
+                lainnya.
+            </p>
+
+            <button onclick="openForm('motivationForm')">
+                Bagikan Motivasi →
+            </button>
+        </div>
+
+    </div>
+
+
+    <!-- FORM PRIVAT -->
+    <div id="privateForm" class="form-box hidden">
+
+        <h2>🔒 Pengaduan Pribadi</h2>
+
+        <p>Formulir ini ditujukan kepada admin kampus.</p>
+
+        <form id="privateReport">
+
+            <label>Nama (Opsional)</label>
+            <input type="text" name="name"
+                placeholder="Nama kamu">
+
+            <label>Fakultas / Program Studi</label>
+            <input type="text" name="study" required
+                placeholder="Masukkan fakultas atau program studi">
+
+            <label>Angkatan</label>
+            <input type="text" name="year" required
+                placeholder="Contoh: 2025">
+
+            <label>Nomor Telepon (Opsional)</label>
+            <input type="tel" name="phone"
+                placeholder="Nomor telepon">
+
+            <label>Jenis Permasalahan</label>
+            <select name="issue" required>
+                <option value="">Pilih permasalahan</option>
+                <option>Perundungan / Bullying</option>
+                <option>Kecemasan Akademik</option>
+                <option>Masalah Pertemanan</option>
+                <option>Masalah dengan Dosen</option>
+                <option>Masalah Ekonomi</option>
+                <option>Lainnya</option>
+            </select>
+
+            <label>Kronologi atau Dampak</label>
+            <textarea name="details" required
+                placeholder="Ceritakan permasalahan yang kamu alami..."></textarea>
+
+            <label>Bentuk Bantuan yang Diinginkan</label>
+            <textarea name="help" required
+                placeholder="Bantuan seperti apa yang kamu butuhkan?"></textarea>
+
+            <p class="privacy-note">
+                🔒 Laporan ini bersifat privat dan hanya
+                dapat diakses oleh admin yang berwenang
+                setelah sistem keamanan dikonfigurasi.
+            </p>
+
+            <button type="submit">Kirim Pengaduan</button>
+
+            <p id="privateStatus"></p>
+
+        </form>
+
+    </div>
+
+
+    <!-- FORM KELUH KESAH -->
+    <div id="storyForm" class="form-box hidden">
+
+        <h2>♡ Bagikan Keluh Kesah</h2>
+
+        <p>Ceritamu dapat dibaca dan dibalas mahasiswa lain.</p>
+
+        <form id="publicStory">
+
+            <label>Nama / Nama Samaran</label>
+            <input type="text" name="author" required
+                placeholder="Masukkan nama atau nama samaran">
+
+            <label>Fakultas (Opsional)</label>
+            <input type="text" name="faculty"
+                placeholder="Nama fakultas">
+
+            <label>Keluh Kesah</label>
+            <textarea name="content" required
+                placeholder="Tuliskan keluh kesahmu..."></textarea>
+
+            <button type="submit">Posting</button>
+
+            <p id="storyStatus"></p>
+
+        </form>
+
+    </div>
+
+
+    <!-- FORM MOTIVASI -->
+    <div id="motivationForm" class="form-box hidden">
+
+        <h2>✦ Bagikan Motivasi</h2>
+
+        <p>Bagikan pesan positif untuk sesama mahasiswa.</p>
+
+        <form id="publicMotivation">
+
+            <label>Nama / Nama Samaran</label>
+            <input type="text" name="author" required
+                placeholder="Masukkan nama atau nama samaran">
+
+            <label>Fakultas (Opsional)</label>
+            <input type="text" name="faculty"
+                placeholder="Nama fakultas">
+
+            <label>Motivasi</label>
+            <textarea name="content" required
+                placeholder="Tuliskan motivasimu..."></textarea>
+
+            <button type="submit">Posting</button>
+
+            <p id="motivationStatus"></p>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+    <h3>♡ Safe Space Kampus</h3>
+
+    <p>
+        Ruang untuk didengar, tempat untuk saling menguatkan.
+    </p>
+
+    <small>Safe Space Kampus © 2026</small>
+</footer>
+
+
+<script type="module" src="app.js"></script>
+
+</body>
+</html>
